@@ -5,7 +5,7 @@ const express = require('express')
 const contenedor = new Contenedor('./productos.txt')
 const app = express()
 
-const PORT = 8080
+const PORT = env.process.PORT || 8080
 
 const server = app.listen(PORT, () => {
     console.log(`Servidor http escuchando en el puerto ${server.address().port}`)
